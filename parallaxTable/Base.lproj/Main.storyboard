@@ -14,24 +14,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="Loe-Yd-g9A">
+                        <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="Loe-Yd-g9A">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="klcc" translatesAutoresizingMaskIntoConstraints="NO" id="CS6-LZ-SfC">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sweatshop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KT-9K-ZMF">
+                                    <rect key="frame" x="0.0" y="150" width="320" height="24"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61P-Rl-I57">
+                                    <rect key="frame" x="0.0" y="200" width="320" height="24"/>
+                                    <state key="normal" image="fav_line"/>
+                                    <connections>
+                                        <action selector="favButtonTapped:" destination="HZG-87-MQg" eventType="touchUpInside" id="9oB-j2-bcg"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="CS6-LZ-SfC" secondAttribute="trailing" id="8Ib-QD-aOf"/>
                                 <constraint firstItem="CS6-LZ-SfC" firstAttribute="leading" secondItem="Loe-Yd-g9A" secondAttribute="leading" id="OGe-Vy-HAe"/>
                                 <constraint firstItem="CS6-LZ-SfC" firstAttribute="top" secondItem="Loe-Yd-g9A" secondAttribute="top" id="PxZ-Vp-X3q"/>
+                                <constraint firstItem="7KT-9K-ZMF" firstAttribute="width" secondItem="Loe-Yd-g9A" secondAttribute="width" id="SCs-ds-nQ3"/>
+                                <constraint firstItem="61P-Rl-I57" firstAttribute="width" secondItem="Loe-Yd-g9A" secondAttribute="width" id="hNM-In-NlL"/>
                                 <constraint firstAttribute="bottom" secondItem="CS6-LZ-SfC" secondAttribute="bottom" id="nix-2g-dHY"/>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="BdM-7t-NzP" customClass="MerchantTableViewCell" customModule="parallaxTable" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="BdM-7t-NzP" customClass="MerchantTableViewCell" customModule="parallaxTable" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="278" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BdM-7t-NzP" id="dz4-8m-nnD">
@@ -44,20 +59,20 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtu-PM-XP2">
-                                            <rect key="frame" x="12" y="8" width="300" height="25"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtu-PM-XP2">
+                                            <rect key="frame" x="10" y="8" width="300" height="25"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="1T5-sC-lgu" secondAttribute="trailing" constant="8" id="5c6-BV-48q"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1T5-sC-lgu" secondAttribute="trailing" constant="10" id="5c6-BV-48q"/>
                                         <constraint firstItem="1T5-sC-lgu" firstAttribute="leading" secondItem="dz4-8m-nnD" secondAttribute="leading" constant="10" id="60r-Nx-Gz0"/>
                                         <constraint firstItem="vtu-PM-XP2" firstAttribute="leading" secondItem="dz4-8m-nnD" secondAttribute="leading" constant="10" id="A5w-wa-76P"/>
                                         <constraint firstAttribute="bottom" secondItem="1T5-sC-lgu" secondAttribute="bottom" constant="8" id="Cjo-2O-Tgk"/>
                                         <constraint firstItem="vtu-PM-XP2" firstAttribute="top" secondItem="dz4-8m-nnD" secondAttribute="top" constant="8" id="DhW-q8-Yvy"/>
-                                        <constraint firstAttribute="trailing" secondItem="vtu-PM-XP2" secondAttribute="trailing" constant="8" id="nAD-vr-r3K"/>
+                                        <constraint firstAttribute="trailing" secondItem="vtu-PM-XP2" secondAttribute="trailing" constant="10" id="nAD-vr-r3K"/>
                                         <constraint firstItem="1T5-sC-lgu" firstAttribute="top" secondItem="vtu-PM-XP2" secondAttribute="bottom" id="oft-s3-5al"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -75,6 +90,9 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="favButton" destination="61P-Rl-I57" id="GEG-Nw-R8K"/>
+                        <outlet property="headerHolderView" destination="Loe-Yd-g9A" id="bHP-dq-5IT"/>
+                        <outlet property="merchantName" destination="7KT-9K-ZMF" id="xYW-UF-Fnk"/>
                         <outlet property="tableView" destination="2iU-ux-XX5" id="Hjl-Ia-hY5"/>
                     </connections>
                 </tableViewController>
@@ -84,6 +102,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fav_line" width="24" height="24"/>
         <image name="klcc" width="1200" height="800"/>
     </resources>
 </document>

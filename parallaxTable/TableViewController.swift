@@ -10,9 +10,16 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    let tableHeaderHeight : CGFloat = 250.0
+    // the top view that contains background image
+    @IBOutlet weak var headerHolderView: UIView!
     
+    @IBOutlet weak var favButton: UIButton!
+    @IBOutlet weak var merchantName: UILabel!
     var tableHeaderView: UIView!
+    
+    let tableHeaderHeight : CGFloat = 250.0
+    let merchantNameLabelOriginY : CGFloat = 150.0
+    let favButtonOriginY : CGFloat = 200.0
     
     var titleArr: [String] = []
     var descriptionArr: [String] = []
@@ -34,6 +41,8 @@ class TableViewController: UITableViewController {
         tableView.contentOffset = CGPoint(x: 0, y: -tableHeaderHeight)
         updateTableHeaderView()
         
+        // Initialize fav button tag
+        favButton.tag = 0
         
         // Initialize dummy data to array
         titleArr = ["Name", "Phone", "Address" , "Lorem Ipsum"]
@@ -46,6 +55,11 @@ class TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        // Initialize position of merchantName label
+        merchantName.frame = CGRect(x: 0, y: 150 , width: tableView.frame.width, height: 20)
+        favButton.frame = CGRect(x: 0, y: 200 , width: tableView.frame.width, height: 24)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -133,15 +147,34 @@ class TableViewController: UITableViewController {
     
     // MARK: - Controller specific functions
     func updateTableHeaderView() {
+        NSLog("the tableview vertical offset is %f", tableView.contentOffset.y)
+        
         var headerRect = CGRect(x: 0, y: -tableHeaderHeight, width: tableView.bounds.width, height: tableHeaderHeight)
         if tableView.contentOffset.y < -tableHeaderHeight {
-            print("scrolling down")
-            print("tableview ofset is smaller than header height")
+            //print("scrolling up")
+            //print("tableview ofset is smaller than header height")
             headerRect.origin.y = tableView.contentOffset.y
             headerRect.size.height = -tableView.contentOffset.y
         }
         
         tableHeaderView.frame = headerRect
+        
+        
+        let nameRect = CGRect(x: 0, y: tableView.contentOffset.y + tableHeaderHeight + self.merchantNameLabelOriginY , width: tableView.bounds.width, height: 24)
+        let favRect = CGRect(x: 0, y: tableView.contentOffset.y + tableHeaderHeight + self.favButtonOriginY , width: tableView.frame.width, height: 24)
+        
+        merchantName.frame = nameRect
+        favButton.frame = favRect
+    
     }
 
+    @IBAction func favButtonTapped(sender: AnyObject) {
+        if(favButton.tag == 0){
+            favButton.setImage(UIImage(named: "fav_fill"), forState: .Normal)
+            favButton.tag = 1
+        } else {
+            favButton.setImage(UIImage(named: "fav_line"), forState: .Normal)
+            favButton.tag = 0
+        }
+    }
 }

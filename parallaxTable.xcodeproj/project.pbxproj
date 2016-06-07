@@ -421,7 +421,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = parallaxTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sweatshop.parallaxTable;
+				PRODUCT_BUNDLE_IDENTIFIER = in.sweatshop.parallaxTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -432,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = parallaxTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sweatshop.parallaxTable;
+				PRODUCT_BUNDLE_IDENTIFIER = in.sweatshop.parallaxTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -502,6 +502,7 @@
 				062015571D06664700254E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		062015581D06664700254E93 /* Build configuration list for PBXNativeTarget "parallaxTableTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +511,7 @@
 				0620155A1D06664700254E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0620155B1D06664700254E93 /* Build configuration list for PBXNativeTarget "parallaxTableUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +520,7 @@
 				0620155D1D06664700254E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
