@@ -12,15 +12,16 @@ class TableViewController: UITableViewController {
     
     // the top view that contains background image
     @IBOutlet weak var headerHolderView: UIView!
+    @IBOutlet weak var headerImageView: UIImageView!
     
 
     @IBOutlet weak var favButton: DOFavoriteButton!
     @IBOutlet weak var merchantName: UILabel!
     var tableHeaderView: UIView!
     
-    let tableHeaderHeight : CGFloat = 250.0
-    let merchantNameLabelOriginY : CGFloat = 150.0
-    let favButtonOriginY : CGFloat = 200.0
+    let tableHeaderHeight : CGFloat = 300.0
+    let merchantNameLabelOriginY : CGFloat = 210.0
+    let favButtonOriginY : CGFloat = 240.0
     
     var titleArr: [String] = []
     var descriptionArr: [String] = []
@@ -57,9 +58,10 @@ class TableViewController: UITableViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
+
         // Initialize position of merchantName label
-        merchantName.frame = CGRect(x: 0, y: 150 , width: tableView.frame.width, height: 20)
-        favButton.frame = CGRect(x: 0, y: 200 , width: tableView.frame.width, height: 32)
+        merchantName.frame = CGRect(x: 0, y: self.merchantNameLabelOriginY , width: tableView.bounds.width, height: self.merchantName.frame.size.height)
+        favButton.frame = CGRect(x: 0, y: self.favButtonOriginY , width: favButton.frame.size.width, height: favButton.frame.size.height)
         
         // center the merchant name
         merchantName.center = CGPointMake(CGRectGetMidX(tableView.bounds), merchantName.center.y);
@@ -67,14 +69,36 @@ class TableViewController: UITableViewController {
         // center the favButton
         favButton.center = CGPointMake(CGRectGetMidX(tableView.bounds), favButton.center.y);
         
+        // Add parallax effect when device is tilted horizontally or vertically for the header image
+        
+        //http://www.teehanlax.com/blog/introduction-to-uimotioneffect/
+        let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
+        
+        let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .TiltAlongVerticalAxis)
+    
+        horizontalMotionEffect.minimumRelativeValue = -15;
+        horizontalMotionEffect.maximumRelativeValue = 15;
+        verticalMotionEffect.minimumRelativeValue = -15;
+        verticalMotionEffect.maximumRelativeValue = 15;
+        
+        headerImageView.addMotionEffect(horizontalMotionEffect)
+        headerImageView.addMotionEffect(verticalMotionEffect)
+        
+        //[redView addMotionEffect:horizontalMotionEffect];
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // status bar hidden or not
     override func prefersStatusBarHidden() -> Bool {
-        return true
+        return false
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
 
     // MARK: - Table view data source
@@ -168,8 +192,8 @@ class TableViewController: UITableViewController {
         tableHeaderView.frame = headerRect
         
         
-        let nameRect = CGRect(x: 0, y: tableView.contentOffset.y + tableHeaderHeight + self.merchantNameLabelOriginY , width: tableView.bounds.width, height: 24)
-        let favRect = CGRect(x: 0, y: tableView.contentOffset.y + tableHeaderHeight + self.favButtonOriginY , width: favButton.frame.size.width, height: 32)
+        let nameRect = CGRect(x: 0, y: tableView.contentOffset.y + tableHeaderHeight + self.merchantNameLabelOriginY , width: tableView.bounds.width, height: self.merchantName.frame.size.height)
+        let favRect = CGRect(x: 0, y: tableView.contentOffset.y + tableHeaderHeight + self.favButtonOriginY , width: favButton.frame.size.width, height: favButton.frame.size.height)
         
         merchantName.frame = nameRect
         favButton.frame = favRect

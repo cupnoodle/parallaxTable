@@ -15,20 +15,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="Loe-Yd-g9A">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="klcc" translatesAutoresizingMaskIntoConstraints="NO" id="CS6-LZ-SfC">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                                    <rect key="frame" x="-30" y="-30" width="380" height="360"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sweatshop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KT-9K-ZMF">
-                                    <rect key="frame" x="0.0" y="150" width="320" height="24"/>
+                                    <rect key="frame" x="0.0" y="210" width="320" height="24"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzr-NB-KUa" customClass="DOFavoriteButton" customModule="parallaxTable" customModuleProvider="target">
-                                    <rect key="frame" x="144" y="200" width="32" height="32"/>
+                                    <rect key="frame" x="144" y="240" width="40" height="40"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="fav_fill"/>
                                         <userDefinedRuntimeAttribute type="color" keyPath="imageColorOn">
@@ -54,17 +54,17 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="CS6-LZ-SfC" secondAttribute="trailing" id="8Ib-QD-aOf"/>
-                                <constraint firstItem="CS6-LZ-SfC" firstAttribute="leading" secondItem="Loe-Yd-g9A" secondAttribute="leading" id="OGe-Vy-HAe"/>
-                                <constraint firstItem="CS6-LZ-SfC" firstAttribute="top" secondItem="Loe-Yd-g9A" secondAttribute="top" id="PxZ-Vp-X3q"/>
+                                <constraint firstAttribute="trailing" secondItem="CS6-LZ-SfC" secondAttribute="trailing" constant="-30" id="8Ib-QD-aOf"/>
+                                <constraint firstItem="CS6-LZ-SfC" firstAttribute="leading" secondItem="Loe-Yd-g9A" secondAttribute="leading" constant="-30" id="OGe-Vy-HAe"/>
+                                <constraint firstItem="CS6-LZ-SfC" firstAttribute="top" secondItem="Loe-Yd-g9A" secondAttribute="top" constant="-30" id="PxZ-Vp-X3q"/>
                                 <constraint firstItem="7KT-9K-ZMF" firstAttribute="width" secondItem="Loe-Yd-g9A" secondAttribute="width" id="SCs-ds-nQ3"/>
                                 <constraint firstItem="dzr-NB-KUa" firstAttribute="centerX" secondItem="Loe-Yd-g9A" secondAttribute="centerX" id="cdW-cK-8Mu"/>
-                                <constraint firstAttribute="bottom" secondItem="CS6-LZ-SfC" secondAttribute="bottom" id="nix-2g-dHY"/>
+                                <constraint firstAttribute="bottom" secondItem="CS6-LZ-SfC" secondAttribute="bottom" constant="-30" id="nix-2g-dHY"/>
                             </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="BdM-7t-NzP" customClass="MerchantTableViewCell" customModule="parallaxTable" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="278" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="328" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BdM-7t-NzP" id="dz4-8m-nnD">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
@@ -104,11 +104,13 @@
                             <outlet property="delegate" destination="HZG-87-MQg" id="jPf-Et-m3t"/>
                         </connections>
                     </tableView>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="favButton" destination="dzr-NB-KUa" id="37k-lr-AHK"/>
                         <outlet property="headerHolderView" destination="Loe-Yd-g9A" id="bHP-dq-5IT"/>
+                        <outlet property="headerImageView" destination="CS6-LZ-SfC" id="Zbr-j9-O14"/>
                         <outlet property="merchantName" destination="7KT-9K-ZMF" id="xYW-UF-Fnk"/>
                         <outlet property="tableView" destination="2iU-ux-XX5" id="Hjl-Ia-hY5"/>
                     </connections>
