@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		062015311D06664700254E93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062015301D06664700254E93 /* AppDelegate.swift */; };
+		062015331D06664700254E93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062015321D06664700254E93 /* ViewController.swift */; };
+		062015361D06664700254E93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062015341D06664700254E93 /* Main.storyboard */; };
+		062015381D06664700254E93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062015371D06664700254E93 /* Assets.xcassets */; };
+		0620153B1D06664700254E93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062015391D06664700254E93 /* LaunchScreen.storyboard */; };
+		062015461D06664700254E93 /* parallaxTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062015451D06664700254E93 /* parallaxTableTests.swift */; };
+		062015511D06664700254E93 /* parallaxTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062015501D06664700254E93 /* parallaxTableUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		062015421D06664700254E93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 062015251D06664700254E93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0620152C1D06664700254E93;
+			remoteInfo = parallaxTable;
+		};
+		0620154D1D06664700254E93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 062015251D06664700254E93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0620152C1D06664700254E93;
+			remoteInfo = parallaxTable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0620152D1D06664700254E93 /* parallaxTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parallaxTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		062015301D06664700254E93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		062015321D06664700254E93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		062015351D06664700254E93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		062015371D06664700254E93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0620153A1D06664700254E93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0620153C1D06664700254E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		062015411D06664700254E93 /* parallaxTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = parallaxTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		062015451D06664700254E93 /* parallaxTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parallaxTableTests.swift; sourceTree = "<group>"; };
+		062015471D06664700254E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0620154C1D06664700254E93 /* parallaxTableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = parallaxTableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		062015501D06664700254E93 /* parallaxTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parallaxTableUITests.swift; sourceTree = "<group>"; };
+		062015521D06664700254E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0620152A1D06664700254E93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0620153E1D06664700254E93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062015491D06664700254E93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		062015241D06664700254E93 = {
+			isa = PBXGroup;
+			children = (
+				0620152F1D06664700254E93 /* parallaxTable */,
+				062015441D06664700254E93 /* parallaxTableTests */,
+				0620154F1D06664700254E93 /* parallaxTableUITests */,
+				0620152E1D06664700254E93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0620152E1D06664700254E93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0620152D1D06664700254E93 /* parallaxTable.app */,
+				062015411D06664700254E93 /* parallaxTableTests.xctest */,
+				0620154C1D06664700254E93 /* parallaxTableUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0620152F1D06664700254E93 /* parallaxTable */ = {
+			isa = PBXGroup;
+			children = (
+				062015301D06664700254E93 /* AppDelegate.swift */,
+				062015321D06664700254E93 /* ViewController.swift */,
+				062015341D06664700254E93 /* Main.storyboard */,
+				062015371D06664700254E93 /* Assets.xcassets */,
+				062015391D06664700254E93 /* LaunchScreen.storyboard */,
+				0620153C1D06664700254E93 /* Info.plist */,
+			);
+			path = parallaxTable;
+			sourceTree = "<group>";
+		};
+		062015441D06664700254E93 /* parallaxTableTests */ = {
+			isa = PBXGroup;
+			children = (
+				062015451D06664700254E93 /* parallaxTableTests.swift */,
+				062015471D06664700254E93 /* Info.plist */,
+			);
+			path = parallaxTableTests;
+			sourceTree = "<group>";
+		};
+		0620154F1D06664700254E93 /* parallaxTableUITests */ = {
+			isa = PBXGroup;
+			children = (
+				062015501D06664700254E93 /* parallaxTableUITests.swift */,
+				062015521D06664700254E93 /* Info.plist */,
+			);
+			path = parallaxTableUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0620152C1D06664700254E93 /* parallaxTable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 062015551D06664700254E93 /* Build configuration list for PBXNativeTarget "parallaxTable" */;
+			buildPhases = (
+				062015291D06664700254E93 /* Sources */,
+				0620152A1D06664700254E93 /* Frameworks */,
+				0620152B1D06664700254E93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = parallaxTable;
+			productName = parallaxTable;
+			productReference = 0620152D1D06664700254E93 /* parallaxTable.app */;
+			productType = "com.apple.product-type.application";
+		};
+		062015401D06664700254E93 /* parallaxTableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 062015581D06664700254E93 /* Build configuration list for PBXNativeTarget "parallaxTableTests" */;
+			buildPhases = (
+				0620153D1D06664700254E93 /* Sources */,
+				0620153E1D06664700254E93 /* Frameworks */,
+				0620153F1D06664700254E93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				062015431D06664700254E93 /* PBXTargetDependency */,
+			);
+			name = parallaxTableTests;
+			productName = parallaxTableTests;
+			productReference = 062015411D06664700254E93 /* parallaxTableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0620154B1D06664700254E93 /* parallaxTableUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0620155B1D06664700254E93 /* Build configuration list for PBXNativeTarget "parallaxTableUITests" */;
+			buildPhases = (
+				062015481D06664700254E93 /* Sources */,
+				062015491D06664700254E93 /* Frameworks */,
+				0620154A1D06664700254E93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0620154E1D06664700254E93 /* PBXTargetDependency */,
+			);
+			name = parallaxTableUITests;
+			productName = parallaxTableUITests;
+			productReference = 0620154C1D06664700254E93 /* parallaxTableUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		062015251D06664700254E93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Sweatshop;
+				TargetAttributes = {
+					0620152C1D06664700254E93 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					062015401D06664700254E93 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0620152C1D06664700254E93;
+					};
+					0620154B1D06664700254E93 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0620152C1D06664700254E93;
+					};
+				};
+			};
+			buildConfigurationList = 062015281D06664700254E93 /* Build configuration list for PBXProject "parallaxTable" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 062015241D06664700254E93;
+			productRefGroup = 0620152E1D06664700254E93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0620152C1D06664700254E93 /* parallaxTable */,
+				062015401D06664700254E93 /* parallaxTableTests */,
+				0620154B1D06664700254E93 /* parallaxTableUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0620152B1D06664700254E93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0620153B1D06664700254E93 /* LaunchScreen.storyboard in Resources */,
+				062015381D06664700254E93 /* Assets.xcassets in Resources */,
+				062015361D06664700254E93 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0620153F1D06664700254E93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0620154A1D06664700254E93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		062015291D06664700254E93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062015331D06664700254E93 /* ViewController.swift in Sources */,
+				062015311D06664700254E93 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0620153D1D06664700254E93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062015461D06664700254E93 /* parallaxTableTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062015481D06664700254E93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062015511D06664700254E93 /* parallaxTableUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		062015431D06664700254E93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0620152C1D06664700254E93 /* parallaxTable */;
+			targetProxy = 062015421D06664700254E93 /* PBXContainerItemProxy */;
+		};
+		0620154E1D06664700254E93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0620152C1D06664700254E93 /* parallaxTable */;
+			targetProxy = 0620154D1D06664700254E93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		062015341D06664700254E93 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				062015351D06664700254E93 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		062015391D06664700254E93 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0620153A1D06664700254E93 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		062015531D06664700254E93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		062015541D06664700254E93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		062015561D06664700254E93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = parallaxTable/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sweatshop.parallaxTable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		062015571D06664700254E93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = parallaxTable/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sweatshop.parallaxTable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		062015591D06664700254E93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = parallaxTableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sweatshop.parallaxTableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/parallaxTable.app/parallaxTable";
+			};
+			name = Debug;
+		};
+		0620155A1D06664700254E93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = parallaxTableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sweatshop.parallaxTableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/parallaxTable.app/parallaxTable";
+			};
+			name = Release;
+		};
+		0620155C1D06664700254E93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = parallaxTableUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sweatshop.parallaxTableUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = parallaxTable;
+			};
+			name = Debug;
+		};
+		0620155D1D06664700254E93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = parallaxTableUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sweatshop.parallaxTableUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = parallaxTable;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		062015281D06664700254E93 /* Build configuration list for PBXProject "parallaxTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062015531D06664700254E93 /* Debug */,
+				062015541D06664700254E93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		062015551D06664700254E93 /* Build configuration list for PBXNativeTarget "parallaxTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062015561D06664700254E93 /* Debug */,
+				062015571D06664700254E93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		062015581D06664700254E93 /* Build configuration list for PBXNativeTarget "parallaxTableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062015591D06664700254E93 /* Debug */,
+				0620155A1D06664700254E93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0620155B1D06664700254E93 /* Build configuration list for PBXNativeTarget "parallaxTableUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0620155C1D06664700254E93 /* Debug */,
+				0620155D1D06664700254E93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 062015251D06664700254E93 /* Project object */;
+}
