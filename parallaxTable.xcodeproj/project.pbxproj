@@ -18,6 +18,8 @@
 		062015621D06815B00254E93 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062015611D06815B00254E93 /* MerchantTableViewCell.swift */; };
 		062015631D06815B00254E93 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062015611D06815B00254E93 /* MerchantTableViewCell.swift */; };
 		062015641D06815B00254E93 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062015611D06815B00254E93 /* MerchantTableViewCell.swift */; };
+		0677A9A81D07283700E5B499 /* DOFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677A9A71D07283700E5B499 /* DOFavoriteButton.swift */; };
+		0677A9A91D07283700E5B499 /* DOFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677A9A71D07283700E5B499 /* DOFavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,7 @@
 		062015521D06664700254E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0620155E1D066EC800254E93 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		062015611D06815B00254E93 /* MerchantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MerchantTableViewCell.swift; path = Library/MerchantTableViewCell.swift; sourceTree = "<group>"; };
+		0677A9A71D07283700E5B499 /* DOFavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DOFavoriteButton.swift; path = Library/DOFavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				062015611D06815B00254E93 /* MerchantTableViewCell.swift */,
+				0677A9A71D07283700E5B499 /* DOFavoriteButton.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -275,6 +279,7 @@
 				062015331D06664700254E93 /* ViewController.swift in Sources */,
 				0620155F1D066EC800254E93 /* TableViewController.swift in Sources */,
 				062015311D06664700254E93 /* AppDelegate.swift in Sources */,
+				0677A9A81D07283700E5B499 /* DOFavoriteButton.swift in Sources */,
 				062015621D06815B00254E93 /* MerchantTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				062015511D06664700254E93 /* parallaxTableUITests.swift in Sources */,
+				0677A9A91D07283700E5B499 /* DOFavoriteButton.swift in Sources */,
 				062015641D06815B00254E93 /* MerchantTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

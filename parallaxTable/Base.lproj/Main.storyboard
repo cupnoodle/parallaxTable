@@ -27,11 +27,28 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61P-Rl-I57">
-                                    <rect key="frame" x="0.0" y="200" width="320" height="24"/>
-                                    <state key="normal" image="fav_line"/>
+                                <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzr-NB-KUa" customClass="DOFavoriteButton" customModule="parallaxTable" customModuleProvider="target">
+                                    <rect key="frame" x="144" y="200" width="32" height="32"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="fav_fill"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="imageColorOn">
+                                            <color key="value" red="0.91890952225130884" green="0.089273663453017363" blue="0.24330989697291366" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="imageColorOff">
+                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="favButtonTapped:" destination="HZG-87-MQg" eventType="touchUpInside" id="9oB-j2-bcg"/>
+                                        <action selector="favTapped:" destination="HZG-87-MQg" eventType="touchUpInside" id="YOp-Zx-jfs"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -41,7 +58,7 @@
                                 <constraint firstItem="CS6-LZ-SfC" firstAttribute="leading" secondItem="Loe-Yd-g9A" secondAttribute="leading" id="OGe-Vy-HAe"/>
                                 <constraint firstItem="CS6-LZ-SfC" firstAttribute="top" secondItem="Loe-Yd-g9A" secondAttribute="top" id="PxZ-Vp-X3q"/>
                                 <constraint firstItem="7KT-9K-ZMF" firstAttribute="width" secondItem="Loe-Yd-g9A" secondAttribute="width" id="SCs-ds-nQ3"/>
-                                <constraint firstItem="61P-Rl-I57" firstAttribute="width" secondItem="Loe-Yd-g9A" secondAttribute="width" id="hNM-In-NlL"/>
+                                <constraint firstItem="dzr-NB-KUa" firstAttribute="centerX" secondItem="Loe-Yd-g9A" secondAttribute="centerX" id="cdW-cK-8Mu"/>
                                 <constraint firstAttribute="bottom" secondItem="CS6-LZ-SfC" secondAttribute="bottom" id="nix-2g-dHY"/>
                             </constraints>
                         </view>
@@ -50,11 +67,11 @@
                                 <rect key="frame" x="0.0" y="278" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BdM-7t-NzP" id="dz4-8m-nnD">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text=" Lorem ipsum dolor sit amet, consectetur " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1T5-sC-lgu">
-                                            <rect key="frame" x="8" y="29" width="296" height="32.5"/>
+                                            <rect key="frame" x="8" y="29" width="296" height="33"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -90,7 +107,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="favButton" destination="61P-Rl-I57" id="GEG-Nw-R8K"/>
+                        <outlet property="favButton" destination="dzr-NB-KUa" id="37k-lr-AHK"/>
                         <outlet property="headerHolderView" destination="Loe-Yd-g9A" id="bHP-dq-5IT"/>
                         <outlet property="merchantName" destination="7KT-9K-ZMF" id="xYW-UF-Fnk"/>
                         <outlet property="tableView" destination="2iU-ux-XX5" id="Hjl-Ia-hY5"/>
@@ -102,7 +119,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fav_line" width="24" height="24"/>
+        <image name="fav_fill" width="24" height="24"/>
         <image name="klcc" width="1200" height="800"/>
     </resources>
 </document>

@@ -13,7 +13,8 @@ class TableViewController: UITableViewController {
     // the top view that contains background image
     @IBOutlet weak var headerHolderView: UIView!
     
-    @IBOutlet weak var favButton: UIButton!
+
+    @IBOutlet weak var favButton: DOFavoriteButton!
     @IBOutlet weak var merchantName: UILabel!
     var tableHeaderView: UIView!
     
@@ -58,7 +59,14 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         // Initialize position of merchantName label
         merchantName.frame = CGRect(x: 0, y: 150 , width: tableView.frame.width, height: 20)
-        favButton.frame = CGRect(x: 0, y: 200 , width: tableView.frame.width, height: 24)
+        favButton.frame = CGRect(x: 0, y: 200 , width: tableView.frame.width, height: 32)
+        
+        // center the merchant name
+        merchantName.center = CGPointMake(CGRectGetMidX(tableView.bounds), merchantName.center.y);
+        
+        // center the favButton
+        favButton.center = CGPointMake(CGRectGetMidX(tableView.bounds), favButton.center.y);
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -161,20 +169,29 @@ class TableViewController: UITableViewController {
         
         
         let nameRect = CGRect(x: 0, y: tableView.contentOffset.y + tableHeaderHeight + self.merchantNameLabelOriginY , width: tableView.bounds.width, height: 24)
-        let favRect = CGRect(x: 0, y: tableView.contentOffset.y + tableHeaderHeight + self.favButtonOriginY , width: tableView.frame.width, height: 24)
+        let favRect = CGRect(x: 0, y: tableView.contentOffset.y + tableHeaderHeight + self.favButtonOriginY , width: favButton.frame.size.width, height: 32)
         
         merchantName.frame = nameRect
         favButton.frame = favRect
+        
+        // center the merchant name
+        merchantName.center = CGPointMake(CGRectGetMidX(tableView.bounds), merchantName.center.y);
+        
+        // center the favButton
+        favButton.center = CGPointMake(CGRectGetMidX(tableView.bounds), favButton.center.y);
+        
     
     }
 
-    @IBAction func favButtonTapped(sender: AnyObject) {
-        if(favButton.tag == 0){
-            favButton.setImage(UIImage(named: "fav_fill"), forState: .Normal)
-            favButton.tag = 1
+    @IBAction func favTapped(sender: DOFavoriteButton) {
+        if (sender.selected) {
+            // deselect
+            sender.deselect()
         } else {
-            favButton.setImage(UIImage(named: "fav_line"), forState: .Normal)
-            favButton.tag = 0
+            // select with animation
+            sender.select()
         }
     }
+    
+    
 }
