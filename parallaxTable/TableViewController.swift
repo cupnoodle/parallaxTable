@@ -10,6 +10,10 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    let tableHeaderHeight : CGFloat = 250.0
+    
+    var tableHeaderView: UIView!
+    
     var titleArr: [String] = []
     var descriptionArr: [String] = []
     
@@ -20,9 +24,20 @@ class TableViewController: UITableViewController {
         tableView.estimatedRowHeight = 65.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
+        // Configure table header to reference with tableHeaderView variable
+        tableHeaderView = tableView.tableHeaderView
+        tableView.tableHeaderView = nil
+        
+        // Push down the table content by the height of tableHeaderHeight
+        tableView.addSubview(tableHeaderView)
+        tableView.contentInset = UIEdgeInsets(top: tableHeaderHeight, left: 0.0, bottom: 0.0, right: 0.0)
+        tableView.contentOffset = CGPoint(x: 0, y: -tableHeaderHeight)
+        updateTableHeaderView()
+        
+        
         // Initialize dummy data to array
-        titleArr = ["Name", "Phone", "Address"]
-        descriptionArr = ["Sweatshop", "016-6666666", "SoHo Suites @ KLCC, Jalan Perak, 50450 Kuala Lumpur, Malaysia"]
+        titleArr = ["Name", "Phone", "Address" , "Lorem Ipsum"]
+        descriptionArr = ["Sweatshop", "016-6666666", "SoHo Suites @ KLCC, Jalan Perak, 50450 Kuala Lumpur, Malaysia", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor ipsum at massa condimentum, eget cursus nunc auctor. Suspendisse aliquet odio non pellentesque accumsan. Pellentesque ac tortor eu urna auctor pharetra. Duis ante erat, varius sagittis mi faucibus, varius ornare orci. Mauris venenatis justo ut iaculis sagittis. Etiam nec tristique nunc. Fusce lorem sem, pharetra ac sagittis ac, egestas eget nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras nisi leo, auctor vitae tempor finibus, scelerisque in elit. Donec pharetra diam sollicitudin, pharetra erat ac, cursus justo. Suspendisse at ligula sed nisi sodales fringilla. "]
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -110,5 +125,23 @@ class TableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Scroll View Delegate
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        updateTableHeaderView()
+    }
+    
+    // MARK: - Controller specific functions
+    func updateTableHeaderView() {
+        var headerRect = CGRect(x: 0, y: -tableHeaderHeight, width: tableView.bounds.width, height: tableHeaderHeight)
+        if tableView.contentOffset.y < -tableHeaderHeight {
+            print("scrolling down")
+            print("tableview ofset is smaller than header height")
+            headerRect.origin.y = tableView.contentOffset.y
+            headerRect.size.height = -tableView.contentOffset.y
+        }
+        
+        tableHeaderView.frame = headerRect
+    }
 
 }
