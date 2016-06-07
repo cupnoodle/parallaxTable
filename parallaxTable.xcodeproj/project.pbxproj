@@ -14,6 +14,10 @@
 		0620153B1D06664700254E93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062015391D06664700254E93 /* LaunchScreen.storyboard */; };
 		062015461D06664700254E93 /* parallaxTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062015451D06664700254E93 /* parallaxTableTests.swift */; };
 		062015511D06664700254E93 /* parallaxTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062015501D06664700254E93 /* parallaxTableUITests.swift */; };
+		0620155F1D066EC800254E93 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0620155E1D066EC800254E93 /* TableViewController.swift */; };
+		062015621D06815B00254E93 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062015611D06815B00254E93 /* MerchantTableViewCell.swift */; };
+		062015631D06815B00254E93 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062015611D06815B00254E93 /* MerchantTableViewCell.swift */; };
+		062015641D06815B00254E93 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062015611D06815B00254E93 /* MerchantTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,8 @@
 		0620154C1D06664700254E93 /* parallaxTableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = parallaxTableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		062015501D06664700254E93 /* parallaxTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parallaxTableUITests.swift; sourceTree = "<group>"; };
 		062015521D06664700254E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0620155E1D066EC800254E93 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		062015611D06815B00254E93 /* MerchantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MerchantTableViewCell.swift; path = Library/MerchantTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,14 @@
 		0620152F1D06664700254E93 /* parallaxTable */ = {
 			isa = PBXGroup;
 			children = (
+				062015601D067FD400254E93 /* Library */,
 				062015301D06664700254E93 /* AppDelegate.swift */,
 				062015321D06664700254E93 /* ViewController.swift */,
 				062015341D06664700254E93 /* Main.storyboard */,
 				062015371D06664700254E93 /* Assets.xcassets */,
 				062015391D06664700254E93 /* LaunchScreen.storyboard */,
 				0620153C1D06664700254E93 /* Info.plist */,
+				0620155E1D066EC800254E93 /* TableViewController.swift */,
 			);
 			path = parallaxTable;
 			sourceTree = "<group>";
@@ -123,6 +131,14 @@
 				062015521D06664700254E93 /* Info.plist */,
 			);
 			path = parallaxTableUITests;
+			sourceTree = "<group>";
+		};
+		062015601D067FD400254E93 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				062015611D06815B00254E93 /* MerchantTableViewCell.swift */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				062015331D06664700254E93 /* ViewController.swift in Sources */,
+				0620155F1D066EC800254E93 /* TableViewController.swift in Sources */,
 				062015311D06664700254E93 /* AppDelegate.swift in Sources */,
+				062015621D06815B00254E93 /* MerchantTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				062015461D06664700254E93 /* parallaxTableTests.swift in Sources */,
+				062015631D06815B00254E93 /* MerchantTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				062015511D06664700254E93 /* parallaxTableUITests.swift in Sources */,
+				062015641D06815B00254E93 /* MerchantTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
