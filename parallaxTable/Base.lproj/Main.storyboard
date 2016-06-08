@@ -51,6 +51,9 @@
                                         <action selector="favTapped:" destination="HZG-87-MQg" eventType="touchUpInside" id="YOp-Zx-jfs"/>
                                     </connections>
                                 </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="m6X-ny-Dib">
+                                    <rect key="frame" x="85" y="80" width="150" height="150"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -58,6 +61,7 @@
                                 <constraint firstItem="CS6-LZ-SfC" firstAttribute="leading" secondItem="Loe-Yd-g9A" secondAttribute="leading" constant="-30" id="OGe-Vy-HAe"/>
                                 <constraint firstItem="CS6-LZ-SfC" firstAttribute="top" secondItem="Loe-Yd-g9A" secondAttribute="top" constant="-30" id="PxZ-Vp-X3q"/>
                                 <constraint firstItem="7KT-9K-ZMF" firstAttribute="width" secondItem="Loe-Yd-g9A" secondAttribute="width" id="SCs-ds-nQ3"/>
+                                <constraint firstItem="m6X-ny-Dib" firstAttribute="centerX" secondItem="CS6-LZ-SfC" secondAttribute="centerX" id="UWF-Q3-gNI"/>
                                 <constraint firstItem="dzr-NB-KUa" firstAttribute="centerX" secondItem="Loe-Yd-g9A" secondAttribute="centerX" id="cdW-cK-8Mu"/>
                                 <constraint firstAttribute="bottom" secondItem="CS6-LZ-SfC" secondAttribute="bottom" constant="-30" id="nix-2g-dHY"/>
                             </constraints>
@@ -117,6 +121,7 @@
                         <outlet property="headerHolderView" destination="Loe-Yd-g9A" id="bHP-dq-5IT"/>
                         <outlet property="headerImageView" destination="CS6-LZ-SfC" id="Zbr-j9-O14"/>
                         <outlet property="merchantName" destination="7KT-9K-ZMF" id="xYW-UF-Fnk"/>
+                        <outlet property="profileImageView" destination="m6X-ny-Dib" id="MPl-9t-O0P"/>
                         <outlet property="tableView" destination="2iU-ux-XX5" id="Hjl-Ia-hY5"/>
                     </connections>
                 </tableViewController>
@@ -146,6 +151,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avatar" width="150" height="150"/>
         <image name="fav_fill" width="24" height="24"/>
         <image name="klcc" width="1200" height="800"/>
         <image name="share" width="24" height="24"/>

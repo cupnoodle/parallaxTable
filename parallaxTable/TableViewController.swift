@@ -15,13 +15,16 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var headerImageView: UIImageView!
     
 
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var favButton: DOFavoriteButton!
     @IBOutlet weak var merchantName: UILabel!
+    
     var tableHeaderView: UIView!
     
     let tableHeaderHeight : CGFloat = 260.0
     let merchantNameLabelOriginY : CGFloat = 240.0
     let favButtonOriginY : CGFloat = 270.0
+    let profileImageOriginY : CGFloat = 80.0
     
     let navAndStatusBarColor : UIColor = UIColor(red: 0.51, green: 0.83, blue: 0.20, alpha: 1.0)
     
@@ -64,12 +67,22 @@ class TableViewController: UITableViewController {
         // Initialize position of merchantName label
         merchantName.frame = CGRect(x: 0, y: self.merchantNameLabelOriginY , width: tableView.bounds.width, height: self.merchantName.frame.size.height)
         favButton.frame = CGRect(x: 0, y: self.favButtonOriginY , width: favButton.frame.size.width, height: favButton.frame.size.height)
+        profileImageView.frame = CGRect(x: 0, y: self.profileImageOriginY, width: profileImageView.frame.size.width, height: profileImageView.frame.size.height)
         
-        // center the merchant name
+        // horizontally center the merchant name
         merchantName.center = CGPointMake(CGRectGetMidX(tableView.bounds), merchantName.center.y);
         
-        // center the favButton
+        // horizontally center the favButton
         favButton.center = CGPointMake(CGRectGetMidX(tableView.bounds), favButton.center.y);
+        
+        // horizontally center the profile image and style it
+        profileImageView.center = CGPointMake(CGRectGetMidX(tableView.bounds), profileImageView.center.y);
+        profileImageView.layer.cornerRadius = 20.0
+        profileImageView.layer.borderWidth = 2.0
+        profileImageView.layer.borderColor = UIColor.whiteColor().CGColor
+        profileImageView.clipsToBounds = true
+        
+        
         
         // Add parallax effect when device is tilted horizontally or vertically for the header image
         
@@ -199,6 +212,8 @@ class TableViewController: UITableViewController {
         NSLog("the tableview vertical offset is %f", tableView.contentOffset.y)
         
         var headerRect = CGRect(x: 0, y: -tableHeaderHeight, width: tableView.bounds.width, height: tableHeaderHeight)
+        
+        // shrink table height when scrolled up
         if tableView.contentOffset.y < -tableHeaderHeight {
             //print("scrolling up")
             //print("tableview ofset is smaller than header height")
@@ -208,19 +223,23 @@ class TableViewController: UITableViewController {
         
         tableHeaderView.frame = headerRect
         
-        
+        // fix the position of name label, fav button and profile picture when scrolled
         let nameRect = CGRect(x: 0, y: tableView.contentOffset.y + tableHeaderHeight + self.merchantNameLabelOriginY , width: tableView.bounds.width, height: self.merchantName.frame.size.height)
         let favRect = CGRect(x: 0, y: tableView.contentOffset.y + tableHeaderHeight + self.favButtonOriginY , width: favButton.frame.size.width, height: favButton.frame.size.height)
+        let profileImageRect = CGRect(x: 0, y: tableView.contentOffset.y + tableHeaderHeight + self.profileImageOriginY , width: profileImageView.frame.size.width, height: profileImageView.frame.size.height)
         
         merchantName.frame = nameRect
         favButton.frame = favRect
+        profileImageView.frame = profileImageRect
         
-        // center the merchant name
+        // horizontally center the merchant name
         merchantName.center = CGPointMake(CGRectGetMidX(tableView.bounds), merchantName.center.y);
         
-        // center the favButton
+        // horizontally center the favButton
         favButton.center = CGPointMake(CGRectGetMidX(tableView.bounds), favButton.center.y);
         
+        // horizontally center the profile image
+        profileImageView.center = CGPointMake(CGRectGetMidX(tableView.bounds), profileImageView.center.y);
     
     }
     
@@ -240,11 +259,11 @@ class TableViewController: UITableViewController {
     
     func setAlphaOfnavStatusBarByScrollOffset(offset: CGFloat){
         
-        var tmpOffset = 300.0 + offset
+        var tmpOffset = 200.0 + offset
         if tmpOffset < 0.0 {
             tmpOffset = 0.0
         }
-        tmpOffset = tmpOffset / 200.0
+        tmpOffset = tmpOffset / 140.0
         
         if tmpOffset > 1.0 {
             tmpOffset = 1.0
