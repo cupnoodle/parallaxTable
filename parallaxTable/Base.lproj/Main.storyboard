@@ -18,7 +18,7 @@
                             <rect key="frame" x="0.0" y="64" width="320" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="klcc" translatesAutoresizingMaskIntoConstraints="NO" id="CS6-LZ-SfC">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="headerbg" translatesAutoresizingMaskIntoConstraints="NO" id="CS6-LZ-SfC">
                                     <rect key="frame" x="-30" y="-30" width="380" height="320"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Asriel Dreemurr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KT-9K-ZMF">
@@ -153,7 +153,7 @@
     <resources>
         <image name="avatar" width="150" height="150"/>
         <image name="fav_fill" width="24" height="24"/>
-        <image name="klcc" width="1200" height="800"/>
+        <image name="headerbg" width="450" height="300"/>
         <image name="share" width="24" height="24"/>
     </resources>
 </document>

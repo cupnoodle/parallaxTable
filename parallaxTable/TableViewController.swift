@@ -48,12 +48,10 @@ class TableViewController: UITableViewController {
         tableView.contentOffset = CGPoint(x: 0, y: -tableHeaderHeight)
         updateTableHeaderView()
         
-        // Initialize fav button tag
-        favButton.tag = 0
         
         // Initialize dummy data to array
-        titleArr = ["Name", "Phone", "Address" , "Lorem Ipsum"]
-        descriptionArr = ["Sweatshop", "016-6666666", "SoHo Suites @ KLCC, Jalan Perak, 50450 Kuala Lumpur, Malaysia", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor ipsum at massa condimentum, eget cursus nunc auctor. Suspendisse aliquet odio non pellentesque accumsan. Pellentesque ac tortor eu urna auctor pharetra. Duis ante erat, varius sagittis mi faucibus, varius ornare orci. Mauris venenatis justo ut iaculis sagittis. Etiam nec tristique nunc. Fusce lorem sem, pharetra ac sagittis ac, egestas eget nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras nisi leo, auctor vitae tempor finibus, scelerisque in elit. Donec pharetra diam sollicitudin, pharetra erat ac, cursus justo. Suspendisse at ligula sed nisi sodales fringilla. "]
+        titleArr = ["Name", "Location", "Quote" , "Lorem Ipsum"]
+        descriptionArr = ["Asriel Dreemurr", "The New Home", " I just want you to remember me like this. Someone that was your friend for a little while. ", "Undertale lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor ipsum at massa condimentum, eget cursus nunc auctor. Suspendisse aliquet odio non pellentesque accumsan. Pellentesque ac tortor eu urna auctor pharetra. Duis ante erat, varius sagittis mi faucibus, varius ornare orci. Mauris venenatis justo ut iaculis sagittis. Etiam nec tristique nunc. Fusce lorem sem, pharetra ac sagittis ac, egestas eget nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras nisi leo, auctor vitae tempor finibus, scelerisque in elit. Donec pharetra diam sollicitudin, pharetra erat ac, cursus justo. Suspendisse at ligula sed nisi sodales fringilla. Duis ante erat, varius sagittis mi faucibus, varius ornare orci. Mauris venenatis justo ut iaculis sagittis. Etiam nec tristique nunc. Fusce lorem sem, pharetra ac sagittis ac, egestas eget nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras nisi leo, auctor vitae tempor finibus, scelerisque in elit. Donec pharetra diam sollicitudin, pharetra erat ac, cursus justo. Suspendisse at ligula sed nisi sodales fringilla."]
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
