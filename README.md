@@ -9,10 +9,11 @@ Parallax image scrolling exercise on iOS.
   
 Tutorial referenced : 
 http://blog.matthewcheok.com/design-teardown-stretchy-headers/
-
+  
 Favorite Animation code :
 https://github.com/okmr-d/DOFavoriteButton
-
+  
 ![Imgur](http://i.imgur.com/XjpIIif.gif "WITH HUMAN SOUL ABSORBED")  
-
-Asriel fanart by [http://phronimeepa.deviantart.com/art/Asriel-Dreemurr-568719525](Phronimeepa)
+  
+Asriel fanart by [http://phronimeepa.deviantart.com/art/Asriel-Dreemurr-568719525](Phronimeepa)  
+Undertale by Toby Fox
