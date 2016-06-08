@@ -19,9 +19,11 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var merchantName: UILabel!
     var tableHeaderView: UIView!
     
-    let tableHeaderHeight : CGFloat = 300.0
-    let merchantNameLabelOriginY : CGFloat = 210.0
-    let favButtonOriginY : CGFloat = 240.0
+    let tableHeaderHeight : CGFloat = 260.0
+    let merchantNameLabelOriginY : CGFloat = 240.0
+    let favButtonOriginY : CGFloat = 270.0
+    
+    let navAndStatusBarColor : UIColor = UIColor(red: 0.51, green: 0.83, blue: 0.20, alpha: 1.0)
     
     var titleArr: [String] = []
     var descriptionArr: [String] = []
@@ -85,6 +87,20 @@ class TableViewController: UITableViewController {
         headerImageView.addMotionEffect(verticalMotionEffect)
         
         //[redView addMotionEffect:horizontalMotionEffect];
+        
+        
+        // Set status bar font to white color
+        self.navigationController?.navigationBar.barStyle = .Black
+        
+        // Sets the translucent background color for navigation bar and status bar
+        
+        self.navigationController?.navigationBar.backgroundColor = navAndStatusBarColor.colorWithAlphaComponent(0.0)
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        self.setNavigationBarTextColor(UIColor.whiteColor().colorWithAlphaComponent(0.0))
+        
+        self.setStatusBarBackgroundColor(navAndStatusBarColor.colorWithAlphaComponent(0.0))
+        
         
     }
     override func didReceiveMemoryWarning() {
@@ -175,6 +191,7 @@ class TableViewController: UITableViewController {
     // MARK: - Scroll View Delegate
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         updateTableHeaderView()
+        setAlphaOfnavStatusBarByScrollOffset(tableView.contentOffset.y)
     }
     
     // MARK: - Controller specific functions
@@ -206,7 +223,40 @@ class TableViewController: UITableViewController {
         
     
     }
-
+    
+    // http://stackoverflow.com/questions/19063365/how-to-change-the-status-bar-background-color-and-text-color-on-ios-7
+    func setStatusBarBackgroundColor(color: UIColor) {
+        
+        guard  let statusBar = UIApplication.sharedApplication().valueForKey("statusBarWindow")?.valueForKey("statusBar") as? UIView else {
+            return
+        }
+        
+        statusBar.backgroundColor = color
+    }
+    
+    func setNavigationBarTextColor(color: UIColor) {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : color]
+    }
+    
+    func setAlphaOfnavStatusBarByScrollOffset(offset: CGFloat){
+        
+        var tmpOffset = 300.0 + offset
+        if tmpOffset < 0.0 {
+            tmpOffset = 0.0
+        }
+        tmpOffset = tmpOffset / 200.0
+        
+        if tmpOffset > 1.0 {
+            tmpOffset = 1.0
+        }
+        
+        setStatusBarBackgroundColor(navAndStatusBarColor.colorWithAlphaComponent(tmpOffset))
+        self.navigationController?.navigationBar.backgroundColor = navAndStatusBarColor.colorWithAlphaComponent(tmpOffset)
+        self.setNavigationBarTextColor(UIColor.whiteColor().colorWithAlphaComponent(tmpOffset))
+        
+    }
+    
+    
     @IBAction func favTapped(sender: DOFavoriteButton) {
         if (sender.selected) {
             // deselect

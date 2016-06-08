@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HZG-87-MQg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TMp-9H-Xnu">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Asriel-->
         <scene sceneID="d9X-z0-GFl">
             <objects>
                 <tableViewController id="HZG-87-MQg" customClass="TableViewController" customModule="parallaxTable" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,20 +15,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="Loe-Yd-g9A">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                            <rect key="frame" x="0.0" y="64" width="320" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="klcc" translatesAutoresizingMaskIntoConstraints="NO" id="CS6-LZ-SfC">
-                                    <rect key="frame" x="-30" y="-30" width="380" height="360"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="klcc" translatesAutoresizingMaskIntoConstraints="NO" id="CS6-LZ-SfC">
+                                    <rect key="frame" x="-30" y="-30" width="380" height="320"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sweatshop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KT-9K-ZMF">
-                                    <rect key="frame" x="0.0" y="210" width="320" height="24"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Asriel Dreemurr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KT-9K-ZMF">
+                                    <rect key="frame" x="0.0" y="240" width="320" height="24"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzr-NB-KUa" customClass="DOFavoriteButton" customModule="parallaxTable" customModuleProvider="target">
-                                    <rect key="frame" x="144" y="240" width="40" height="40"/>
+                                    <rect key="frame" x="144" y="270" width="40" height="40"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="fav_fill"/>
                                         <userDefinedRuntimeAttribute type="color" keyPath="imageColorOn">
@@ -64,10 +64,10 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="BdM-7t-NzP" customClass="MerchantTableViewCell" customModule="parallaxTable" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="328" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="392" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BdM-7t-NzP" id="dz4-8m-nnD">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text=" Lorem ipsum dolor sit amet, consectetur " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1T5-sC-lgu">
@@ -104,8 +104,13 @@
                             <outlet property="delegate" destination="HZG-87-MQg" id="jPf-Et-m3t"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Asriel" id="l8v-B8-fRD">
+                        <barButtonItem key="rightBarButtonItem" image="share" id="v4E-Cn-HJP">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="favButton" destination="dzr-NB-KUa" id="37k-lr-AHK"/>
@@ -117,11 +122,32 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAg-Le-217" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1099" y="260"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aRZ-eI-2Ox">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TMp-9H-Xnu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mu9-tg-eWq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HZG-87-MQg" kind="relationship" relationship="rootViewController" id="OoZ-h2-A9G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXN-Z0-kDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="287" y="260"/>
         </scene>
     </scenes>
     <resources>
         <image name="fav_fill" width="24" height="24"/>
         <image name="klcc" width="1200" height="800"/>
+        <image name="share" width="24" height="24"/>
     </resources>
 </document>
